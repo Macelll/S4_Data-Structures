@@ -1,0 +1,117 @@
+v. Sort and display by Tutors ID in ascending order 
+[Linked List]
+START
+	DECLARE TUTOR POINTER VARIABLE current, SET to head
+	DECLARE TUTOR POINTER VARIABLE index, SET to NULL
+	
+	DISPLAY "Sort and Display by Tutors ID in ascending Order"
+	IF(head == NULL): 
+		RETURN
+	ELSE :
+		WHILE(current != NULL):
+			SET index TO current->next
+			WHILE(index != NULL):
+				IF(current->id > index->id):
+					SET temp TO current->id
+					SET current TO index->id
+					SET index->id TO temp
+				END IF
+				SET index TO index->next
+			END WHIILE
+			SET current TO current->next
+		END WHILE
+	END IF
+	CALL displayTutor()
+	DISPLAY "Returning to Main Menu"
+	RETURN
+END
+
+[Array List]
+START
+	DECLARE STRUCTURE TUTOR VARIABLE temp
+	DISPLAY "Sort and display by Tutors ID in ascending order"
+	DISPLAY "Sorting Tutors by Tutor ID[Ascending]"
+	FOR(INT i = 0; i < ::insertingIndex; i++):
+		IF(::allTutor[i].id > ::allTutor[i+1].id):
+			SET temp TO ::allTutor[i]
+			SET ::allTutor[i] TO ::allTutor[i+1]
+			SET ::allTutor[i] TO temp
+		END IF
+	END FOR
+	CALL FUNCTION displayTutor()
+	DISPLAY "Returning to Main Menu"
+	RETURN
+END
+
+vi. Sort and display by Tutors Hourly Pay Rate in ascending order [Linked List]
+START
+	DECLARE TUTOR POINTER VARIABLE current, SET to head
+	DECLARE TUTOR POINTER VARIABLE index, SET to NULL
+	
+	DISPLAY "Sort and Display by Tutors ID in ascending Order"
+	IF(head == NULL): 
+		RETURN
+	ELSE :
+		WHILE(current != NULL):
+			SET index TO current->next
+			WHILE(index != NULL):
+				IF(current->hourlyRate > index->hourlyRate):
+					SET temp TO current->hourlyRate
+					SET current TO index->hourlyRate
+					SET index->hourlyRate TO temp
+				END IF
+				SET index TO index->next
+			END WHIILE
+			SET current TO current->next
+		END WHILE
+	END IF
+	CALL displayTutor()
+	DISPLAY "Returning to Main Menu"
+	RETURN
+END
+
+[Array List]
+START
+	DECLARE STRUCTURE TUTOR VARIABLE temp
+	DISPLAY "Sort and display by Tutors Hourly Pay Rate in ascending order"
+	DISPLAY "Sorting Tutors by Tutor Hourly Pay Rate[Ascending]"
+	FOR(INT i = 0; i < ::insertingIndex; i++):
+		IF(::allTutor[i].hourlyRate > ::allTutor[i+1].hourlyRate):
+			SET temp TO ::allTutor[i]
+			SET ::allTutor[i] TO ::allTutor[i+1]
+			SET ::allTutor[i] TO temp
+		END IF
+	END FOR
+	CALL FUNCTION displayTutor()
+	DISPLAY "Returning to Main Menu"
+	RETURN
+END
+
+vii. Sort and display by Tutors Overall Performance in ascending order [Linked List]
+START
+	DECLARE TUTOR POINTER VARIABLE current, SET to head
+	DECLARE TUTOR POINTER VARIABLE index, SET to NULL
+	
+	DISPLAY "Sort and Display by Tutors ID in ascending Order"
+	IF(head == NULL): 
+		RETURN
+	ELSE :
+		WHILE(current != NULL):
+			SET index TO current->next
+			WHILE(index != NULL):
+				IF(current->rating > index->rating):
+					SET temp TO current->rating
+					SET current TO index->rating
+					SET index->rating TO temp
+				END IF
+				SET index TO index->next
+			END WHIILE
+			SET current TO current->next
+		END WHILE
+	END IF
+	CALL displayTutor()
+	DISPLAY "Returning to Main Menu"
+	RETURN
+END
+
+[Array List]
